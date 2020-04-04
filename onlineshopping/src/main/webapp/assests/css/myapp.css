@@ -53,9 +53,6 @@ footer {
 }
 
 
-
-
-
 /*
 	custom styling 
 */
@@ -73,5 +70,20 @@ footer {
 	bottom: 15px;
 	height: 60px;
 }
+
+.dataTableImg{
+	width: 100px;
+	height: 100px;	
+}
+
+
+
+
+
+
+
+
+
+
 
 

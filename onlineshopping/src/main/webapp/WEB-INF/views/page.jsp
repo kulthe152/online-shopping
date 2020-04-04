@@ -23,6 +23,7 @@
     
     <script>
     	window.menu = '${title}';
+    	window.contextRoot = '${contextRoot}'
     </script>
 
     <!-- Bootstrap core CSS -->
@@ -31,6 +32,10 @@
 	
 	<!-- Bootstrap readable them -->
 	<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+	
+
+	<!-- Bootstrap DataTable them -->
+	<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 	
 	
     <!-- Add custom CSS here -->
@@ -54,32 +59,45 @@
 			<%@include file="home.jsp" %>
 			</c:if>
 			
+			<!-- Load only when user click about -->
 			<c:if test="${userClickAbout == true }">
 			<%@include file="about.jsp" %>
 			</c:if>
 			
+			<!-- Load only when user click Contact-->
 			<c:if test="${userClickContact == true }">
 			<%@include file="contact.jsp" %>
 			</c:if>
 			
+			<!-- Load only when user click Product -->
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 			<%@include file="listProducts.jsp" %>
 			</c:if>
-		
-		
-    <!-- /.container -->
-	
+			
+			<!-- Load only when user click show single product -->
+			<c:if test="${userClickShowProduct == true }">
+			<%@include file="singleProduct.jsp" %>
+			</c:if>
+			
 		</div>
 	
 		<!-- Footer come here -->
 	<%@include file="./shared/footer.jsp" %>
 	
+
     <!-- /.container -->
 
     <!-- JavaScript -->
     <script src="${js}/jquery.js"></script>
-    <script src="${js}/bootstrap.min.js"></script>
     
+    <script src="${js}/bootstrap.min.js"></script>
+	
+	<!-- datatable plugin -->
+	<script src="${js}/jquery.dataTables.js"></script>
+	
+	<!-- datatable Bootstrap scripts -->
+	<script src="${js}/dataTables.bootstrap.js"></script>
+	    
     <!-- self coded javascript -->
 	<script src="${js}/myapp.js"></script>
 	

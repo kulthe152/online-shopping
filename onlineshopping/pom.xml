@@ -20,11 +20,11 @@
 
 	<dependencies>
 		
-		<dependency>
+		 <dependency>
 				<groupId>net.sk</groupId>
 				<artifactId>shoppingbackend</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency> 
 
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api instead of server -->
 		<dependency>
@@ -33,6 +33,7 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+	
 		<!-- JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -40,11 +41,25 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+	
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
