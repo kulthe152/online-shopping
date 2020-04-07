@@ -14,6 +14,10 @@ $(function(){
 		$('#listProducts').addClass('active');
 		break;
 		
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
+		break;
+
 	default:
 		if(menu == "Home") break;
 		$('#listProducts').addClass('active');
@@ -93,20 +97,21 @@ $(function(){
 									str += '<a href="'+window.contextRoot+ '/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"</span></a>';
 								}
 								
-									
-								
 								return str;
 							}
-						}
-						
+					 }
 					 ]
 			
-			
-			
-			
-		})
+		});
+	}
+	
+	//dismissing the alert after 3 seconds
+	var $alert = $('.alert');
+	if($alert.length){
 		
-		
+		setTimeout(function() {
+			$alert.fadeOut('slow');
+		} , 2000)
 	}
 	
 });
